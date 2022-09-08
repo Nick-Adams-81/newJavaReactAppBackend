@@ -1,6 +1,5 @@
 package com.example.backend.controllers;
 
-
 import com.example.backend.models.Users;
 import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
