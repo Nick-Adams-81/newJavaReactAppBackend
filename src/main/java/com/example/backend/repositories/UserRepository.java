@@ -1,7 +1,7 @@
 package com.example.backend.repositories;
 
-import org.apache.catalina.User;
+import com.example.backend.models.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<Users, Long> {
 }
