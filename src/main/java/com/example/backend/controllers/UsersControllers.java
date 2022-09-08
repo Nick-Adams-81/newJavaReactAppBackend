@@ -5,6 +5,8 @@ import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 public class UsersControllers {
@@ -15,6 +17,11 @@ public class UsersControllers {
     public String add(@RequestBody Users user) {
         userService.saveUsers(user);
         return "New user added";
+    }
+
+    @GetMapping("/getAll")
+    public List<Users> getAllUsers() {
+        return userService.getAllUsers();
     }
 
 }
