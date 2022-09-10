@@ -3,6 +3,7 @@ package com.example.backend.controllers;
 import com.example.backend.models.Users;
 import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +24,11 @@ public class UsersControllers {
     @GetMapping("/getAll")
     public List<Users> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @DeleteMapping("delete/{id}")
+    public void deleteUser(@PathVariable Users id) {
+        userService.deleteUsers(id);
     }
 
 }

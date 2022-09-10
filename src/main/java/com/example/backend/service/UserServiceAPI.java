@@ -22,4 +22,10 @@ public class UserServiceAPI implements UserService{
     public List<Users> getAllUsers() {
         return userDao.findAll();
     }
+
+    @Override
+    public void deleteUsers(Users user) {
+        userDao.delete(user);
+    }
+
 }
