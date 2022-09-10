@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "*")
 public class UsersControllers {
     @Autowired
     private UserService userService;
@@ -31,7 +31,7 @@ public class UsersControllers {
 
 
 
-    @CrossOrigin(origins = "http://localhost:3000")
+
     @DeleteMapping("delete/{id}")
     public String deleteUser(@PathVariable Users id) {
         userService.deleteUsers(id);
