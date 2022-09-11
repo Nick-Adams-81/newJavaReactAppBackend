@@ -1,5 +1,6 @@
 package com.example.backend.controllers;
 
+import com.example.backend.config.CorsConfig;
 import com.example.backend.models.Users;
 import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
 public class UsersControllers {
     @Autowired
     private UserService userService;
