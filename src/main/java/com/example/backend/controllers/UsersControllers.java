@@ -36,8 +36,10 @@ public class UsersControllers {
 
     @PutMapping("update/{id}")
     public String updateUser(@PathVariable long id, @RequestBody Users user) {
+        String username = user.setUsername(user.getUsername());
+        String email = user.setEmail(user.getEmail());
         userService.saveUsers(user);
-        return "User: " + id + " has been updated!";
+        return  username + " " + email + " " + id;
     }
 
 
