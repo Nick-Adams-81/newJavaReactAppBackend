@@ -3,6 +3,7 @@ package com.example.backend.service;
 import com.example.backend.models.Users;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
 
@@ -11,4 +12,6 @@ public interface UserService {
     List<Users> getAllUsers();
 
     void deleteUsers(Users id);
+
+    Optional<Users> getOneUser(long id);
 }

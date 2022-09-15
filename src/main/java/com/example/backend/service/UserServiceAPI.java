@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceAPI implements UserService{
@@ -27,5 +28,11 @@ public class UserServiceAPI implements UserService{
     public void deleteUsers(Users user) {
         userDao.delete(user);
     }
+
+    @Override
+    public Optional<Users> getOneUser(long id) {
+        return userDao.findById(id);
+    }
+
 
 }
